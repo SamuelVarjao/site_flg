@@ -331,22 +331,48 @@ ul {
 }
 
 .hero-content h1 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 800;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 900;
   color: var(--white);
   line-height: 1.1;
   letter-spacing: -0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-  margin-bottom: 36px;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
+.hero-highlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff6b6b, #ffffff, #ff6b6b);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: laserSweep 4s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.6)) drop-shadow(0 0 60px rgba(220, 38, 38, 0.3));
+  text-shadow: none;
+}
+
+@keyframes laserSweep {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.hero-tagline {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.hero-deadline {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .hero-ctas {
