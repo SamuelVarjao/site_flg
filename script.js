@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Scroll animations (Intersection Observer) ---
   const animatedElements = document.querySelectorAll(
-    '.service-card, .case-card, .testimonial-card, .why-list li, .faq-item, .section-title, .section-subtitle'
+    '.service-card, .portfolio-item, .testimonial-card, .why-card, .faq-item, .section-title, .section-subtitle, .about-text, .about-badge'
   );
 
   animatedElements.forEach(el => el.classList.add('fade-in'));
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const navHeight = navbar.offsetHeight;
+        const navHeight = navbar.offsetHeight + 24;
         const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
 
         window.scrollTo({
