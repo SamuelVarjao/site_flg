@@ -214,12 +214,12 @@ ul { list-style: none; }
 
 /* Hero text hierarchy */
 .hero-line {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(3rem, 2vw, 1.3rem);
   font-weight: 400;
   color: rgba(255,255,255,0.7);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 35px;
 }
 .hero-line strong { color: var(--red-400); font-weight: 700; }
 
@@ -336,7 +336,8 @@ ul { list-style: none; }
   margin: 0 auto 56px;
   line-height: 1.7;
 }
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.services-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.services-grid .service-card { flex: 0 1 calc(33.333% - 16px); min-width: 0; }
 .service-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -584,7 +585,7 @@ ul { list-style: none; }
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid .service-card { flex: 0 1 calc(50% - 12px); }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid-cards { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
@@ -616,7 +617,7 @@ ul { list-style: none; }
   .hero-ctas { flex-direction: column; align-items: center; }
   .hero-ctas .btn { width: 100%; max-width: 300px; }
 
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid .service-card { flex: 0 1 100%; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid-cards { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
